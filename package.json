@@ -1,7 +1,7 @@
 {
   "name": "grunt-build-rpm",
   "description": "Create RPM package to install files/directories",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/plessbd/grunt-build-rpm",
   "author": {
     "name": "Ben Plessinger"
