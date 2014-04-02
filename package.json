@@ -1,0 +1,48 @@
+{
+  "name": "grunt-build-rpm",
+  "description": "Create RPM package to install files/directories",
+  "version": "1.0.0",
+  "homepage": "https://github.com/plessbd/grunt-build-rpm",
+  "author": {
+    "name": "Ben Plessinger"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plessbd/grunt-build-rpm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/plessbd/grunt-build-rpm/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/plessbd/grunt-build-rpm/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "shortid": "~2.0.0",
+    "grunt": "~0.4.1",
+    "async": "~0.2.9"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "shortid": "~2.0.0",
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "readmeFilename": "README.md"
+}
