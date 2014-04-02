@@ -1,6 +1,9 @@
 # grunt-build-rpm
 
-> Easily create RPM package to install files/directories
+> Build RPM package to install files/directories
+
+## Credits
+This plugin was based entirely off of grunt-easy-rpm (https://github.com/panitw/easy-rpm).  But since it was not maintained I created this
 
 ## Prerequisite
 This plugin requires Grunt `~0.4.1` and can only run in RedHat varient linux distribution. The `rpmdevtools` and `rpmlint` package needed to be install beforehand.
