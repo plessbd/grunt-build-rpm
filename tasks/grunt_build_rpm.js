@@ -240,7 +240,7 @@ module.exports = function(grunt) {
           if (typeof options.postPackageCreate === "string"){
             if (grunt.file.isDir(options.postPackageCreate)){
               destinationFile = path.join(options.postPackageCreate, rpmFilename);
-              grunt.file.copy(path.join(rpmFilename,rpmFilename) , destinationFile);
+              grunt.file.copy(path.join(rpmPath, rpmFilename) , destinationFile);
               grunt.log.writeln("Copied output RPM package to: " + destinationFile);
             }
             else {
