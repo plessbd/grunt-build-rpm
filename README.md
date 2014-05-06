@@ -136,6 +136,14 @@ Default value: `'tmp-'+<auto_gen_id>`
 
 A string value that will be use as the temporary path name to store the structure that is required by the `rpmbuild` command.
 
+#### options.postPackageCreate
+Type: `String` | `function(rpmPath, rpmFilename, callback)`
+Default value: `null`
+
+A string value will tell the script where to copy the rpm after it has been created.
+
+A function will be passed the rpmPath, the rpmFilename of the package that has been created, and a callback for completion of the task.
+
 #### options.keepTemp
 Type: `Boolean`
 Default value: `false`

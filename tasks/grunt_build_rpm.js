@@ -2,7 +2,7 @@
  * grunt-build-rpm
  * https://github.com/plessbd/grunt-build-rpm
  *
- * Copyright (c) 2014 Ben Plessinger 
+ * Copyright (c) 2014 Ben Plessinger
  * Licensed under the MIT license.
  */
 
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
       attrBasket = [],
       filesToExclude = [],
       i = 0,
-      specFilepath;
+      specFilepath, rpmFilename, rpmPath;
 
     //If the tmpDir exists (probably from previous build), delete it first
     if (grunt.file.exists(tmpDir)) {
@@ -247,11 +247,20 @@ module.exports = function(grunt) {
               grunt.fail.warn('Destination path is not a directory');
             }
           }
-          else if (typeof options.postPackageCreate === "function"){
-            options.postPackageCreate(rpmPath, rpmFilename);
-          }
         }
+        callback();
+      },
+      function(callback){
 
+        if (typeof options.postPackageCreate === "function"){
+          grunt.log.writeln("Calling postPackageCreate function");
+          options.postPackageCreate(rpmPath, rpmFilename, callback);
+        }
+        else{
+          callback();
+        }
+      },
+      function(callback){
         //Delete temp folder
         if (!options.keepTemp) {
           grunt.log.writeln("Deleting tmp folder " + tmpDir);

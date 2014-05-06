@@ -5,3 +5,5 @@ tmp
 
 *.iml
 .idea
+
+.DS_Store
